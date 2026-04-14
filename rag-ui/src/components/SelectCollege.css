@@ -1,0 +1,106 @@
+.college-container {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.college-card {
+  width: 400px;
+  background: rgba(19, 41, 61, 0.9);
+  border-radius: 20px;
+  border: 1px solid #375067;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: #425e78 2px 5px 10px 0px;
+  backdrop-filter: blur(10px);
+}
+
+.college-card h2 {
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: #425e78 3px 3px 5px;
+}
+
+.subtitle {
+  color: #94aac6;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* Dropdown */
+.college-select {
+  width: 100%;
+  height: 45px;
+  background: #465a7e66;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 0.95rem;
+  box-shadow: #425e78 2px 5px 10px 0px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.college-select:focus {
+  background: #375067;
+}
+
+/* Button */
+.continue-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #375067;
+  background: #465a7e66;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.continue-btn:hover {
+  background: #375067;
+  transform: translateY(-2px);
+}
+
+/* Blur */
+.blur-effect {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background-color: #097ddb;
+  opacity: 0.1;
+  filter: blur(100px);
+  border-radius: 50%;
+  top: -150px;
+  left: -100px;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.15; }
+  50% { opacity: 0.25; }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .college-card {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .college-select {
+    font-size: 0.9rem;
+  }
+
+  .continue-btn {
+    font-size: 0.9rem;
+  }
+}

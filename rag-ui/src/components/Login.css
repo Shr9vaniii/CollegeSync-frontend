@@ -1,0 +1,134 @@
+.Login-container {
+    /* Use max-width so it shrinks on mobile but stays 400px on desktop */
+    width: 90%;
+    max-width: 400px;
+    
+    /* Remove fixed height: let content define height, but set a min-height */
+    min-height: 400px; 
+    
+    background-color: #13293d;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers all children horizontally */
+    padding: 20px;
+    
+    /* Perfect Centering on screen */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    border-radius: 20px;
+    border: 1px solid #375067;
+    box-shadow: #425e78 2px 5px 10px 0px;
+    box-sizing: border-box; /* Crucial for padding calculation */
+}
+
+h2 {
+    padding-top: 10px;
+    text-align: center;
+    color: white;
+    text-shadow: #425e78 4px 4px 5px;
+}
+
+/* Inputs, Buttons, and Google BTN now use 100% of their container */
+.Login-input {
+    width: 320px;
+    max-width: 320px;
+    height: 40px; /* Slightly taller for better touch target */
+    margin-top: 20px;
+    
+    padding: 10px;
+    background-color: #465A7E66;
+    border-radius: 8px;
+    border: 1px solid #375067;
+    color: white;
+    box-shadow: #425e78 2px 3px 8px 0px;
+    box-sizing: border-box;
+    
+}
+
+.Login-button {
+    margin-top: 25px;
+    background-color: #465A7E66;
+    border-radius: 8px;
+    height: 40px;
+    width: 120px; /* Slightly wider for text balance */
+    border: #375067 solid 1px;
+    color: thistle;
+    cursor: pointer;
+    box-shadow: #425e78 2px 5px 10px 0px;
+    transition: 0.3s;
+}
+
+/* Divider cleanup - Centered without hardcoded padding */
+.divider {
+    width: 100%;
+    max-width: 320px;
+    margin: 25px 0;
+    text-align: center;
+    position: relative;
+    color: #94aac6;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1; /* Lines take up remaining space */
+    height: 1px;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.google-btn {
+    width: 100%;
+    max-width: 320px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-color: #465A7E66;
+    border-radius: 8px;
+    border: 1px solid #375067;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+h6 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+}
+
+/* --- Media Queries --- */
+
+/* For very small mobile screens */
+@media (max-width: 380px) {
+    .Login-container {
+        width: 95%;
+        padding: 15px;
+    }
+    
+    h2 { font-size: 1.5rem; }
+    
+    .Login-button { width: 100%; } /* Stack button on tiny screens */
+}
+
+/* For landscape/short screens - switch to relative so it doesn't get cut off */
+@media (max-height: 500px) {
+    .Login-container {
+        position: relative;
+        top: 20px;
+        left: 0;
+        transform: none;
+        margin: 20px auto;
+    }
+}
